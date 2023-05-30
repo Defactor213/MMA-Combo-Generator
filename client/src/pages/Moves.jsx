@@ -25,12 +25,22 @@ const Moves = () => {
 		<div>
 			<h1>List of Moves</h1>
 			<div className="moves">
-				{moves.map((move) => (
-					<div key={move.ID} className="move">
-                        <h5>Move ID is {move.ID} </h5>
-						<p>{move.Name}</p>
-					</div>
-				))}
+				<table className="table">
+					<thead>
+					<tr>
+						<th>ID</th>
+						<th>Move Name</th>
+					</tr>
+					</thead>
+					<tbody>
+					{moves.map((move) => (
+						<tr key={move.id}>
+						<td>{move.id}</td>
+						<td>{move.move_name}</td>
+						</tr>
+					))}
+					</tbody>
+				</table>
 			</div>
 		</div>
 	);

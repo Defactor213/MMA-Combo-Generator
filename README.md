@@ -6,12 +6,12 @@ Application will randomly generate a combo for users to try. If it is interestin
 
 
 ## To-Do List
-1. Use Moves table to create Combos table 
-2. Display Combos table in React app
+1. Add CRUD for Moves and Combos
 3. CRUD combos, Moves must be fixed 
 4. Favorites, Delete function (think about how this should work) (workout mode, explore mode?)
 5. Deploy app 
 6. Add users (Nice to have, not compulsary)
+6. Add way to automate PnC of combos (currently is manual insertion of 2, 3, 4 etc)
 
 
 ## How to run Project
