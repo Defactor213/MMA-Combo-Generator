@@ -7,12 +7,10 @@ Simple React app with SQL backend that generates MMA combos for user's to try an
 Application will randomly generate a combo for users to try. If it is interesting/liked, user's are able to save the combo. If the combo is not do-able, the user can instead delete it.
 
 ## To-Do List
-
-1. Add CRUD for Moves and Combos
-2. Favorites, Delete function (think about how this should work) (workout mode, explore mode?)
-3. Deploy app
-4. Add users (Nice to have, not compulsary)
-5. Add way to automate PnC of combos (currently is manual insertion of 2, 3, 4 etc)
+1. think about further use cases (workout mode, explore mode?)
+2. Deploy app
+3. Add users (Nice to have, not compulsary)
+4. Add way to automate PnC of combos (currently is manual insertion of 2, 3, 4 etc)
 
 ## How to run Project
 

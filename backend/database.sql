@@ -23,7 +23,11 @@ INSERT INTO moves (move_name) VALUES
 ('Left Up Elbow'),
 ('Right Up Elbow'),
 ('Left Knee'),
-('Right Knee');
+('Right Knee'),
+('Step Forward'),
+('Step Back'),
+('Step Left'),
+('Step Right');
 COMMIT;
 
 -- Creating Combos table that has all permutations of Moves table
@@ -32,7 +36,8 @@ COMMIT;
 DROP TABLE IF EXISTS combos;
 CREATE TABLE IF NOT EXISTS combos (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    combo_moves VARCHAR(255) NOT NULL 
+    combo_moves VARCHAR(255) NOT NULL,
+    favorites BOOLEAN DEFAULT false
 );
 
 

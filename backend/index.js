@@ -17,6 +17,7 @@ app.get("/", (req, res) => {
 });
 
 // moves table
+// get all
 app.get("/moves", (req, res) => {
 	const q = "SELECT * FROM moves";
 	db.query(q, (err, data) => {
@@ -25,12 +26,54 @@ app.get("/moves", (req, res) => {
 	});
 });
 
+// add moves
+app.post("/moves", (req, res) => {
+	const q = "INSERT INTO moves (move_name) VALUES (?)";
+
+	const values = [req.body.move_name];
+
+	db.query(q, values, (err, data) => {
+		if (err) return res.json(err);
+		return res.json(data);
+	});
+});
+
+// Delete moves
+app.delete("/moves/:id", (req, res) => {
+	const q = "DELETE FROM moves WHERE id = ? ";
+
+	const moveid = req.params.id;
+
+	db.query(q, [moveid], (err, data) => {
+		if (err) return res.json(err);
+		return res.json(data);
+	});
+});
+
 // combos table
 app.get("/combos", (req, res) => {
-	const q = "SELECT * FROM combos ORDER BY RAND() LIMIT 1";
+	const q = "SELECT * FROM combos";
 	db.query(q, (err, data) => {
 		if (err) return res.json(err);
 		return res.json(data);
+	});
+});
+
+// favorite combo
+app.put("/combos/:id", (req, res) => {
+	const comboId = req.params.id;
+	console.log("id is " + comboId);
+
+	const q = "UPDATE combos SET favorites = true WHERE id = ?";
+	const values = [comboId];
+	db.query(q, values, (err, data) => {
+		if (err) {
+			return res.status(500).send(err);
+		} else {
+			return res.json({
+				message: "Combo favorites updated successfully",
+			});
+		}
 	});
 });
 
