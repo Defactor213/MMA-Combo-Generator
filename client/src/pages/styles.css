@@ -1,0 +1,8 @@
+.square-button {
+	width: 50px; /* Adjust the width as needed */
+	height: 50px; /* Adjust the height as needed */
+	padding: 0; /* Remove padding to make it a square */
+	font-size: 25px; /* Adjust font size as needed */
+    line-height: 50px; /* Vertically center the text there */
+	text-align: center;
+}

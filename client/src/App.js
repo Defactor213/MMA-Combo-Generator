@@ -4,6 +4,7 @@ import Moves from "./pages/Moves";
 import Combos from "./pages/Combos";
 import AddMove from "./pages/AddMove";
 import Favorite from "./pages/Favorites";
+import Workout from "./pages/Workout";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 					<Route path="/Combos" element={<Combos />} />
 					<Route path="/addmove" element={<AddMove />} />
 					<Route path="/Favorite" element={<Favorite />} />
+					<Route path="/Workout" element={<Workout />} />
 				</Routes>
 			</BrowserRouter>
 		</div>

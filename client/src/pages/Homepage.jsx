@@ -21,6 +21,11 @@ const Homepage = () => {
 					Favorites
 				</a>
 			</h2>
+			<h2 className="mt-4">
+				<a href="/Workout" className="text-decoration-none">
+					Workout!
+				</a>
+			</h2>
 		</div>
 	);
 };

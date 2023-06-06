@@ -59,7 +59,8 @@ const Combos = () => {
 					</button>
 				</div>
 			)}
-						<br></br>
+			
+			<br></br>
 
 			<button
 				className="btn btn-secondary"
